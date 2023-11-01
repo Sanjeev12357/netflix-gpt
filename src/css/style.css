@@ -1,0 +1,25 @@
+/* In your global CSS */
+/* Hide the vertical scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /* Optional: Style the track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Optional: Style the thumb (the draggable part) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Adjust the color as needed */
+  }
+  
+
+  /* In your CSS */
+.bg-black-blur {
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired blur effect */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Adjust the z-index to ensure it appears above other content */
+  }
+  
