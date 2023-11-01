@@ -15,6 +15,20 @@ Implement Sign in user api
 -Implemented Sign out
 -Update Profile 
 -Fetch Movies from tmdb Movies
+-BugFix:Signup user displayname and profile picture update
+-BugFix:if the user is not logged in redirect /browse to login page
+-Unsubscribed to the on auth State changed callbacck 
+-add hardcoded values to the constants file
+ -register for tmdb api and create an app and get access token 
+ -get data from tmdb now playing 
+ -CUstom Hook for playin movies 
+ -create movie Slice update Sotre with movies data
+ -planning for main container and secondary ccontainer
+ -fetch  fata for trrailer video 
+ -update store with trailer video data 
+ -embeded the youtube video and make it autoplay and mute
+ -tailwind classes to make it look awesome
+
 
 #fetures
 -Login/Sign up page
