@@ -28,6 +28,15 @@ Implement Sign in user api
  -update store with trailer video data 
  -embeded the youtube video and make it autoplay and mute
  -tailwind classes to make it look awesome
+ -Build Secondary Component
+ build movie list 
+ -tmdb Image cdn url
+ - made the browser page amazing with tailwind css
+ -usePopular movies custom hook
+ -gpt search page
+ -gpt serach bar
+ -multi language feature in our app
+ -Integrate gpt search api
 
 
 #fetures

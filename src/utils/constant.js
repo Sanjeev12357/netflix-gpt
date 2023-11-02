@@ -11,3 +11,6 @@ export const options = {
   };
 
   export const IMG_CDN="https://image.tmdb.org/t/p/w500"
+
+
+  export const OPEN_AIKEY="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";

@@ -6,7 +6,7 @@ import '../css/style.css'
 
 const SecondaryContainer = () => {
   const movies=useSelector(store=>store.movies);
-  console.log("Popular"+movies?.popularMovies);
+  // console.log("Popular"+movies?.popularMovies);
   return (
     movies.addNowPlayingMovies &&(
     <div className=' bg-black '>
