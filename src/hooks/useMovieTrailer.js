@@ -7,7 +7,6 @@ const useMovietrailer=(movieId)=>{
     const dispatch=useDispatch();
 
     
-    
 
     //fetfch trailer video 
     const getMovieVideos=async()=>{

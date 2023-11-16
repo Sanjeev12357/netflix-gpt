@@ -42,7 +42,7 @@ const Login = () => {
           }).then(() => {
             const {uid,email,displayName} = auth.currentUser;
             dispatch(addUser({uid:uid,email:email,displayName:displayName}));
-            console.log(name.current.value);
+            //console.log(name.current.value);
            
             // ...
           }).catch((error) => {
@@ -80,12 +80,12 @@ const Login = () => {
         <Header/>
         <div className='absolute'>
         <img
-        className='h-[100vh] w-[100vw]'
+        className='h-[1000px] md:h-screen object-cover'
         src="https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_small.jpg"
         alt="netfliximg"
         />
         </div>
-        <form className='absolute p-12 bg-black w-1/2 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 '>
+        <form className='w-3/4  absolute p-12 bg-black md:w-1/2 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 '>
             <h1 className='font-bold text-3xl p-2 my-4'>{isSignInform? "Sign In":"Sign Up"}</h1>
 
             {!isSignInform &&(

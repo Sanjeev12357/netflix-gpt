@@ -4,6 +4,7 @@ import Movielist from './Movielist';
 
 const MovieSuggestiongpt = () => {
     const {movieResults,movieNames}=useSelector(store=>store.gpt);
+   
     if(!movieNames) return null;
 
 

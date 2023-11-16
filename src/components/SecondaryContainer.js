@@ -1,24 +1,47 @@
-import React from 'react'
+import React from 'react';
 import Movielist from './Movielist';
-import MovieCard from './MovieCard';
 import { useSelector } from 'react-redux';
-import '../css/style.css'
+import '../css/style.css';
 
 const SecondaryContainer = () => {
-  const movies=useSelector(store=>store.movies);
-  // console.log("Popular"+movies?.popularMovies);
+  const movies = useSelector(store => store.movies);
+
+  const handleMovieCardClick = (movieId) => {
+    console.log('Clicked Movie ID:', movieId);
+    // Add any other logic you need when a movie card is clicked
+  };
+
   return (
-    movies.addNowPlayingMovies &&(
-    <div className=' bg-black '>
-    <div className='-mt-52 pl-12 relative z-20'>
-    <Movielist title={"Now Playing"} movies={movies.addNowPlayingMovies}/>
-    <Movielist title={"Trending"} movies={movies.addTopMovies}/>
-    <Movielist title={"Popular"} movies={movies.popularMovies}/>
-    <Movielist title={"Upcoming Movies"} movies={movies.addUpcomingMovies}/>
-    <Movielist title={"Horror Movies"} movies={movies.addNowPlayingMovies}/>
+    <div className='bg-black'>
+      <div className='mt:0 md:-mt-40 ml-4 md:pl-12 relative z-20'>
+        <Movielist
+          title={'Now Playing'}
+          movies={movies.addNowPlayingMovies}
+          onMovieCardClick={handleMovieCardClick}
+        />
+        <Movielist
+          title={'Trending'}
+          movies={movies.addTopMovies}
+          onMovieCardClick={handleMovieCardClick}
+        />
+        <Movielist
+          title={'Popular'}
+          movies={movies.popularMovies}
+          onMovieCardClick={handleMovieCardClick}
+        />
+        <Movielist
+          title={'Upcoming Movies'}
+          movies={movies.addUpcomingMovies}
+          onMovieCardClick={handleMovieCardClick}
+        />
+        <Movielist
+          title={'Horror Movies'}
+          movies={movies.addNowPlayingMovies}
+          onMovieCardClick={handleMovieCardClick}
+        />
+      </div>
     </div>
-    </div>
-  ))
-}
+  );
+};
 
 export default SecondaryContainer;
