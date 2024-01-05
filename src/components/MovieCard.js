@@ -1,21 +1,19 @@
-// MovieCard.js
-import React, { useState } from 'react';
+
 import { IMG_CDN } from '../utils/constant';
-import VideoModal from './VideoModal';
+
 import '../style.css'; // Import your custom styles
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({ posterPath, movieId }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div
-      className={`w-[200px] h-[120px] md:w-[350px] md:h-[250px] rounded-md movie-card ${isHovered ? 'hovered' : ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`w-[200px] h-[120px] md:w-[350px] md:h-[250px] rounded-md movie-card`}
+      
     >
-      <img alt='Movie Card' src={IMG_CDN + posterPath} />
-
-      {isHovered && <VideoModal movieId={movieId} onClose={() => setIsHovered(false)} />}
+    <Link to={"/browse/" + movieId}>
+      <img alt='Movie Card'   className='rounded-xl' src={IMG_CDN + posterPath}/>
+      </Link>
+      
     </div>
   );
 };

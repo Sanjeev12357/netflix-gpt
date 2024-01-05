@@ -1,10 +1,8 @@
-// VideoModal.js
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import useMovie from '../hooks/useMovie';
 
 const VideoModal = ({ movieId, onClose }) => {
-  // Use the movie hook here
   useMovie(movieId);
 
   const trailerVideo = useSelector((store) => store.movies?.newVideo);
