@@ -4,6 +4,7 @@ import Browser from './Browser'
 import { Router, createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom';
 import MovieDetailsPage from './MovieDetailsPage';
+import Heart from './heart/Heart';
 
 
 const Body = () => {
@@ -21,6 +22,10 @@ const Body = () => {
           path: "/browse/:movieId",
           element: <MovieDetailsPage/>,
         },
+        {
+          path:'/browse/heart',
+          element:<Heart/>
+        }
     ]);
 
 

@@ -1,7 +1,7 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import React, { useEffect } from 'react'
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { addUser,removeUser } from '../utils/userSlice';
@@ -56,6 +56,7 @@ const Header = () => {
         className='rounded-md hidden md:inline-block w-12 md:h-12 '
         src={useravatar}
         alt="user icon"/>
+        <Link to='/browse/heart' className='bg-white h-5 w-10'>Heart</Link>
         <button onClick={handlesignout} className='font-bold text-white'>Sign Out</button>
     </div>)}
     </div>
