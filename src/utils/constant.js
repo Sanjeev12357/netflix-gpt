@@ -13,4 +13,4 @@ export const options = {
   export const IMG_CDN="https://image.tmdb.org/t/p/w500"
 
 
-  export const OPEN_AIKEY="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";
+  export const OPEN_AIKEY = "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";

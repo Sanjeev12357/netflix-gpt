@@ -13,6 +13,7 @@ const GPTSeach = () => {
         </div>
         <SearchBar/>
         <MovieSuggestiongpt/>
+      
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { addUser,removeUser } from '../utils/userSlice';
 import { LOGO, useravatar } from '../utils/constant';
 import { togglesGptSearchView } from '../utils/gptSlic';
+import { CiHeart } from 'react-icons/ci';
 
 const Header = () => {
     const navigate=useNavigate();
@@ -43,21 +44,18 @@ const Header = () => {
       dispatch(togglesGptSearchView());
     }
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex   md: justify-between '>
+    <div className='absolute w-screen px-8 py-2  bg-gradient-to-b from-black z-10 flex items-center justify-center   md: justify-between '>
         <img
         className='w-44 mx-auto md:mx-0 bg-transparent'
         src={LOGO}
         alt="logo"
         />
-        {user && (<div className='flex p-2'>
+        {user && (<div className='flex items-center justify-center gap-[10px] p-2'>
 
-        <button onClick={handlegptSearch} className='hidden md:inline-block py-2  px-4  mx-4 my-2 h-10 text-white bg-purple-800'>{showGptSearch?"HomePage":"GPT Search"}</button>
-        <img 
-        className='rounded-md hidden md:inline-block w-12 md:h-12 '
-        src={useravatar}
-        alt="user icon"/>
-        <Link to='/browse/heart' className='bg-white h-5 w-10'>Heart</Link>
-        <button onClick={handlesignout} className='font-bold text-white'>Sign Out</button>
+        <button onClick={handlegptSearch} className='hidden md:inline-block py-2  px-4  mx-4 my-2 h-10 text-black rounded-xl bg-gray-200'>{showGptSearch?"HomePage":"🔍Search"}</button>
+        
+        <Link to='/browse/heart' className='bg-gray-200 text-black hover:bg-black hover:text-white duration-300 ease-in-out transition-all flex items-center justify-center  w-10 h-10 rounded-full shadow-xl'><CiHeart/></Link>
+        <button onClick={handlesignout} className=' text-black px-4 py-2 bg-gray-200 rounded-xl'>Sign Out</button>
     </div>)}
     </div>
   )
